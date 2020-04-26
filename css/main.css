@@ -4,7 +4,6 @@ font-family: 'Montserrat', sans-serif;
 margin: 0px;
 background-image: url("../assets/images/linedpaper.png");
 background-repeat: repeat;
-
 }
 h1{
   font-size: 40px;
@@ -18,20 +17,23 @@ p{
   font-size: 14px;
 }
 a{
-  color: white;
-
+  color: black;
   text-decoration: none;
 }
 .header{
-    background-color: #000000;
+    background-color: white;
     display: flex;
     font-weight: 700;
-    color: white;
+    color: black;
     align-items: center;
     height: 100px;
     position: fixed;
     width: 100vw;
     z-index: 3;
+}
+.header_logo img {
+  width: 200px;
+  margin: auto 0;
 }
 .header_container{
   justify-content: space-between;
@@ -41,7 +43,7 @@ a{
   align-items: center;
   margin: 0 auto;
   padding: 0 20px;
-
+  box-shadow: 0 3px 6px 0px lightgrey;
 }
 .navbar{
   display: flex;
@@ -53,14 +55,12 @@ a{
   width: 1.5em;
 }
 .navbar_options{
-
     display: flex;
     border-bottom: 1px solid gray;
     padding: 0px;
     width: 600px;
     justify-content: space-between;
     padding: 0.5em 0px;
-
 }
 .navbar li{
     list-style: none;
@@ -80,7 +80,13 @@ a{
 .main_title{
   font-size: 30px;
   font-family: 'Baloo 2';
-  border-left: 4px solid #1a8b9d;
+  border-left: 4px solid #3ea8f9;
+  padding-left: 20px;
+}
+.main_title-contacto{
+  font-size: 30px;
+  font-family: 'Baloo 2';
+  border-left: 4px solid white;
   padding-left: 20px;
 }
 .slider{
@@ -120,7 +126,7 @@ text-align: center;
   grid-area: title;
 }
 .slider_title h2{
-  border-bottom: 2px solid #1a8b9d;
+  border-bottom: 2px solid #3ea8f9;
   display: inline-block;
 }
 .slider_title h1{
@@ -139,7 +145,7 @@ text-align: center;
 }
 .slider_button{
   padding: 1em;
-  border: 3px solid #1a8b9d;
+  border: 3px solid #3ea8f9;
   color: black;
   background-color: white;
   cursor: pointer;
@@ -183,7 +189,7 @@ margin: 0 auto;
   width: 100%;
 }
 .contact{
-  background-color: #1a8b9d;
+  background-color: #3ea8f9;
   color: white;
   padding-top: 50px;
   padding-bottom: 80px;
@@ -224,14 +230,14 @@ flex-direction: column;
   max-width: 50px;
   padding-right: 20px;
 }
-.pancho{
+.contact_wraper{
   max-width: 1000px;
   margin: 0 auto;
 }
 
 footer{
   height: 80px;
-  background-color: #000000;
+  background-color: #404040;
   color: white;
   width:100%;
 }
