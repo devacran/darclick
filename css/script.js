@@ -1,4 +1,3 @@
-
 function showMarketing(){
 redes.style.opacity = "0"
 marketing.style.opacity = "1"

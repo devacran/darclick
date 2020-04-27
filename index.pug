@@ -12,7 +12,7 @@ html
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')      
-    link(rel='stylesheet', type='text/css', href='css/main.css')
+    link(rel='stylesheet', type='text/css', href='css/styles.css')
     link(rel='stylesheet', type='text/css', href='css/mobile.css')
   body
     //inicia el header
@@ -41,7 +41,7 @@ html
           | <p>Utilizamos la mejor <b>tecnología</b> para adatarnos a tus necesidades y para que tu
           | sitio sea funcional y responsivo en todos los <b>dispositivos móviles</b>.</p>
         .slider_img: img(src='assets/icons/www.svg')
-      .slider_container#desarrollo-web
+      .slider_container#redes-sociales
         .slider_title
           h1 REDES SOCIALES
           h2 SOCIAL MEDIA MANAGER
@@ -50,7 +50,7 @@ html
           | <p>Impulsamos tu presencia y en las redes sociales de manera estratégica, con
           | la creación de contenido <b>original y de calidad</b> enfocado a tu publico objetivo.</p>
         .slider_img: img(src='assets/icons/socialmedia.svg')
-      .slider_container#desarrollo-web
+      .slider_container#marketing
         .slider_title
           h1 MARKETING 
           h2 PARA IMPULSAR TU PRESENCIA EN INTERNET
@@ -64,7 +64,7 @@ html
       nav.slider_nav
         a.slider_button#slider_button-desarrollo  Desarrollo Web
         a.slider_button#slider_button-redes  Redes Sociales
-        a.slider_button#slider_button-redes  Maketing          
+        a.slider_button#slider_button-marketing  Maketing          
     
     section.underslider
       h1 CONSULTORIA INTEGRAL
@@ -105,7 +105,7 @@ html
             +contact-info("contacto@darclick.com", 'usuario.png')
             +contact-info("Constitución 416 Revolución Vicente Guerrero, Durango", 'email.png')
                     
-    footer
+    footer.footer
       .footer_back2home: a(href='#home') Regresar a arriba 
       .footer_container
         span.footer_section-left
