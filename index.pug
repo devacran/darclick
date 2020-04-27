@@ -1,0 +1,128 @@
+-var menuLinks = {HOME: 'link', SERVICIOS: 'lonk', PORTFOLIO: 'LINK', BLOG: 'LINK', CONTACTO: 'LINK'}
+mixin portfolioProject(projectUrl, img)
+  <a href=#{$projectUrl} target="_blank"><span class="portfolio_image"><img src='assets/images/#{img}'></span></a>
+mixin contact-form(name,placeholder)
+  <div><input type="text" name="name" placeholder="Nombre" class="contact-form_field"></input></div>
+mixin contact-info(text,img)
+  <span class="contact-info_line"><img src="assets/icons/#{img}">#{text}</span>
+
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')      
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+    link(rel='stylesheet', type='text/css', href='css/mobile.css')
+  body
+    //inicia el header
+    header.header
+      .header_container
+        .header_logo
+          img(src='assets/images/logo2.png')
+        .navbar
+          ul.navbar_options
+            each link, name in menuLinks
+              a(href=link)
+                li=name
+          span.navbar_icon#menu-button: img(src="assets/icons/menu-icon.png")
+    //termina el header
+    section.slider#services
+      span.main_title SERVICIOS
+      .slider_container#desarrollo-web
+        .slider_title
+          h1 DESARROLLO WEB
+          h2 DISEÑO Y PROGRAMACION WEB
+        .slider_content
+          <p>Creamos tu <b>sitio web</b> desde cero y de forma <b>personalizada</b>,
+          | en base a las necesidades  y requerimientos que tu negocio necesita.</p>
+          | <p>Te brindamos la <b>asesoría</b> que necesites para que tomes las mejores decisiones
+          | y tengas <b>éxito</b> en tu proyecto</p>
+          | <p>Utilizamos la mejor <b>tecnología</b> para adatarnos a tus necesidades y para que tu
+          | sitio sea funcional y responsivo en todos los <b>dispositivos móviles</b>.</p>
+        .slider_img: img(src='assets/icons/www.svg')
+      .slider_container#desarrollo-web
+        .slider_title
+          h1 REDES SOCIALES
+          h2 SOCIAL MEDIA MANAGER
+        .slider_content
+          <p>Eres lo que proyectas en las <b>redes sociales</b>, nosotros te ayudamos.</p>
+          | <p>Impulsamos tu presencia y en las redes sociales de manera estratégica, con
+          | la creación de contenido <b>original y de calidad</b> enfocado a tu publico objetivo.</p>
+        .slider_img: img(src='assets/icons/socialmedia.svg')
+      .slider_container#desarrollo-web
+        .slider_title
+          h1 MARKETING 
+          h2 PARA IMPULSAR TU PRESENCIA EN INTERNET
+        .slider_content
+          <p>Generamos las mejores <b>estrategias para que te vendas mas</b>, posicionando tu marca
+          | en el mundo online y logrando llegar a mas clientes potenciales.</p>
+          | <p>Utilizamos las mejores herramientas para llegar a tu publico objetivo como
+          | Anuncios en <b>Google Adwords,  Facebook ADS e Instagram</b>.</p>
+          | <p>Optimizamos tus sitio web mediante <b>SEO</b> para que aparezcas en los primeros lugares en los buscadores.</p>
+        .slider_img: img(src='assets/icons/campana.svg')
+      nav.slider_nav
+        a.slider_button#slider_button-desarrollo  Desarrollo Web
+        a.slider_button#slider_button-redes  Redes Sociales
+        a.slider_button#slider_button-redes  Maketing          
+    
+    section.underslider
+      h1 CONSULTORIA INTEGRAL
+      .underslider_container
+        .underslider_content
+          img(src="assets/icons/ecommerce.svg")
+          h2 E-ecommerce
+          span Te asesoramos para montar tu tienda en internet
+        .underslider_content
+          img(src="assets/icons/marca.svg")
+          h2 Branding
+          span Te ayudamos a crear la imagen de tu marca
+        .underslider_content
+          img(src="assets/icons/tienda.svg")
+          h2 Modelo de Negocio
+          span Te asesoramos para potenciar tu modelo de negocio
+          
+    section.portfolio#portfolio
+      .portfolio_title: span.main_title Portfolio
+      .portfolio_container
+        +portfolioProject("https://miquelanqel.github.io/Movies-Reviews-Website/","project2.png")
+        +portfolioProject("https://miquelanqel.github.io/Product-Web-Page/","project1.png")
+        +portfolioProject("","project3.png")
+        +portfolioProject("","project4.png")
+
+    section.contact
+      .contact_wraper
+        span.main_title-contacto CONTACTO 
+        .contact_container
+          form.contact-form
+            span Cuéntanos, que necesitas:
+            +contact-form('name', 'Nombre')
+            +contact-form('tel', 'Telefono')
+            +contact-form('email', 'E-mail')
+            +contact-form('message', 'Mensaje')  
+          .contact-info
+            +contact-info("6181798014", 'contacto.png')
+            +contact-info("contacto@darclick.com", 'usuario.png')
+            +contact-info("Constitución 416 Revolución Vicente Guerrero, Durango", 'email.png')
+                    
+    footer
+      .footer_back2home: a(href='#home') Regresar a arriba 
+      .footer_container
+        span.footer_section-left
+          div Programación web profesional
+          div: b darClick © 2020
+        span.footer_section-center
+          span: img(src='assets/icons/facebook(1).png')
+          span: img(src='assets/icons/gorjeo.png')
+          span: img(src='assets/icons/Trazado94.png')   
+        span.footer_section-right
+          div Aviso De Privacidad 
+          div Aviso Legal
+    script(src='css/script.js')      
+
+          
+              
+
+          
+          
+        
