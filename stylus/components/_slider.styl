@@ -3,9 +3,15 @@
   max-width: 1024px;
   margin-bottom: 80px;
   padding-top: 150px;
-  center()
   position: relative;
-
+  center()
+  @media mqDesk
+    margin: 0 20px;
+  @media mqTabletPotrait
+    position: initial;
+    height:auto;
+  @media mqMobile
+    margin: 0;
   &_container
     height: 420px;
     bottom: 0;
@@ -15,6 +21,16 @@
     display: grid;
     grid-template: 1fr 2fr / 2fr 1fr;
     grid-template-areas: "title image" "content image";
+    @media mqTabletPotrait
+      position: initial;
+      opacity: 1;
+      grid-template: 1fr 1fr / 1fr 2fr;
+      grid-template-areas: "title title" "image content";
+    @media mqMobile
+      height: auto;
+      padding: 0 20px;
+      grid-template: auto auto / 1fr 2fr;
+      grid-template-areas: "title title" "content content";
     &:first-of-type
       opacity: 1
     &:target
@@ -22,8 +38,14 @@
   &_img
     grid-area: image;
     text-align: center;
+    @media mqTabletPotrait
+      padding: 0 20px
+    @media mqMobile
+      display:none;
     img
       max-width: 250px;
+      @media mqTabletPotrait
+        width: 100%
   &_title
     grid-area: title;
   &_title h1
@@ -46,3 +68,5 @@
     color: black;
     background-color: white;
     cursor: pointer;
+    @media mqTabletPotrait
+      display: none

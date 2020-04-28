@@ -4,12 +4,28 @@
     display: none
     align-self: center;
     padding-left: 20px;
+    @media mqTabletPotrait
+      display: block;
     img
       width: 1.5em
   &_options
-   display: flex;
    border-bottom: 1px solid gray;
    padding: 0px;
    width: 600px;
-   justify-content: space-between;
    padding: 0.5em 0px;
+   flexBetween()
+   &.is-active
+     @media mqTabletPotrait
+       background-color: secondaryColor;
+       display: block;
+       position: absolute;
+       right: 20px;
+       top: 20px;
+       width: 80%;
+       padding: 0 50px;
+   @media mqTabletPotrait
+     display: none
+
+  li
+    @media mqTabletPotrait
+     padding: 0.5em 0;

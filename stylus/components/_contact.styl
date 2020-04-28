@@ -10,11 +10,21 @@
     margin-top: 60px;
     display: flex;
     justify-content: space-around;
+    @media mqTabletPotrait
+      display: block;
 
 .contact-info
   width: 400px;
   display: flex;
   flex-direction: column;
+  @media mqTabletPotrait
+    center()
+    flex-direction: row;
+    width: 90%;
+  @media mqMobilePotrait
+    display: flex;
+    flex-direction: column;
+
   img
     max-width: 50px;
     padding-right: 20px;
@@ -22,17 +32,30 @@
     padding-top: 20px;
     display: inherit;
     align-items: center;
-
+    img
+      @media mqTabletPotrait
+        width: 2em;
+        padding: 0 1em 0.5em;
 
 .contact-form
+  color: primaryColor
   width: 400px;
   border-radius: 10px;
   padding: 25px;
   background-color: thirdyColor;
+  span
+    display: block
+    margin-bottom: 0.5em
+  @media mqTabletPotrait
+    margin: 0 auto
+  @media mqMobile
+    width: auto;
+    margin: 0 20px;
   &_field
-    margin: 0.5em 0;
     width: 100%;
-    height: 2em;
+    height: 3em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    box-sizing: border-box;
     border-radius: 5px;
     border: none;
-    padding: 0.5em;

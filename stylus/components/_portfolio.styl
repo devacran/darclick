@@ -1,13 +1,21 @@
 .portfolio
-  center()
   padding-top: 150px;
+  center()
+  @media mqTabletPotrait
+    grid-template-columns: repeat(3, minmax(100px,auto))
+  @media mqTabletPotrait
+    grid-template-columns: repeat(2, minmax(100px,auto))
   &_title
     max-width: 1024px;
     center()
   &_container
     padding-top: 60px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px,auto));
+    grid-template-columns: repeat(4, minmax(100px,auto))
+    @media mqTablet
+      grid-template-columns: repeat(2, minmax(100px,auto))
+    @media mqMobile
+      grid-template-columns: repeat(1, minmax(100px,auto))
   &_image
     img
       width: 100%

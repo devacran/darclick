@@ -1,13 +1,16 @@
 .underslider
   max-width: 1024px;
-  center()
   font-size: 16px;
   text-align: center;
   border-top: 1px solid transparent;
+  center()
   &_container
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    @media mqMobile
+      display: block;
+      padding: 0 20px;
   &_content
     h2
       font-size: 22px;

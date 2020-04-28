@@ -13,10 +13,12 @@
     center()
   &_container
     display: inherit;
-    center()
     padding: 0 20px;
     max-width: 1024px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 3px 6px 0px lightgrey;
+    center()
+    @media mqTabletPotrait
+      position: relative;

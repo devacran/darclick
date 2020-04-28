@@ -5,9 +5,12 @@
     padding: 0 30px
   &_title
     font-size: 30px;
-    font-family: font2
     border-left: 4px solid secondaryColor;
     padding-left: 20px;
+    text-transform: uppercase;
+    @media mqDesk
+      margin-left: 20px;
+
   &_title-contacto
     border-left: 4px solid primaryColor;
     @extend .main_title
